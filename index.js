@@ -107,7 +107,7 @@ FTP.prototype.prepareLFTPOptions = function () {
 
   var open = 'open'
   if (this.options.username) {
-    open += ' -u "' + this._escapeshell(this.options.username) + '","' + this._escapeshell(this.options.password) + '"'
+    open += ' -u "' + this._escapeshell(this.options.username) + '","' + this.options.password + '"'
   }
   open += ' "' + this.options.host + '"'
   opts.push(open)
